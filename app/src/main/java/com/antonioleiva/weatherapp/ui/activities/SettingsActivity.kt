@@ -12,10 +12,10 @@ class SettingsActivity : AppCompatActivity() {
 
     companion object {
         const val ZIP_CODE = "zipCode"
-        const val DEFAULT_ZIP = 94043L
+        const val DEFAULT_ZIP = "94043"
     }
 
-    private var zipCode: Long by DelegatesExt.preference(this, ZIP_CODE, DEFAULT_ZIP)
+    private var zipCode: String by DelegatesExt.preference(this, ZIP_CODE, DEFAULT_ZIP)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        zipCode = cityCode.text.toString().toLong()
+        zipCode = cityCode.text.toString()
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

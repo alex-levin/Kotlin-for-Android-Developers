@@ -6,7 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class RequestForecastCommand(
-        private val zipCode: Long,
+        private val zipCode: String,
         private val forecastProvider: ForecastProvider = ForecastProvider()) :
         Command<ForecastList> {
 

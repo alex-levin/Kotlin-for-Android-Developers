@@ -1,6 +1,6 @@
 package com.antonioleiva.weatherapp.domain.model
 
-data class ForecastList(val id: Long, val city: String, val country: String,
+data class ForecastList(val id: String, val city: String, val country: String,
         val dailyForecast: List<Forecast>) {
 
     val size: Int

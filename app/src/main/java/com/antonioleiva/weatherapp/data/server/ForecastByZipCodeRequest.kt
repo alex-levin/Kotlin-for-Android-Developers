@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.gson.Gson
 import java.net.URL
 
-class ForecastByZipCodeRequest(private val zipCode: Long, val gson: Gson = Gson()) {
+class ForecastByZipCodeRequest(private val zipCode: String, val gson: Gson = Gson()) {
 
     companion object {
         private const val APP_ID = "15646a06818f61f7b8d7823ca833e1ce"

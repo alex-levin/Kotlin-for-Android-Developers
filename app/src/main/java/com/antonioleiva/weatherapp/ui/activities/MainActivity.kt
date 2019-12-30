@@ -14,7 +14,7 @@ import org.jetbrains.anko.startActivity
 
 class MainActivity : CoroutineScopeActivity(), ToolbarManager {
 
-    private val zipCode: Long by DelegatesExt.preference(this, SettingsActivity.ZIP_CODE,
+    private val zipCode: String by DelegatesExt.preference(this, SettingsActivity.ZIP_CODE,
             SettingsActivity.DEFAULT_ZIP)
     override val toolbar by lazy { find<Toolbar>(R.id.toolbar) }
 
